@@ -1,7 +1,7 @@
-from flask import Blueprint, request
+from flask import Blueprint, render_template
 
 bp = Blueprint('user', __name__)
 
 @bp.route('/user/')
 def user():
-    return "Hello, User!"
+    return render_template('user.html')
