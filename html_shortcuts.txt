@@ -1,0 +1,2 @@
+- type "!" symbol in html file and enter it will give the code which all the html code has
+- type the tag and enter it will provide the complete line, ex: type h1 and enter
