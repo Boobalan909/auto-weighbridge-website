@@ -44,18 +44,63 @@
         .navbar li {
             float: left;
         }
+
+        input[type="submit"]{
+            background-color: rgb(199, 49, 49);
+            color: white;
+            width: 150px;
+            height: 35px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        input{
+            font-size: large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        label{
+            font-size: large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        div{
+            text-align: center;
+            width: 300px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: rgba(212, 211, 211, 0.842);
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
     <h1>Automated Weighbridge System</h1>
     <nav class="navbar">
         <ul>
-            <li><a href="base.html">Transaction</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="reports.html">Reports</a></li>
-            <li><a href="user.html">User Management</a></li>
-            <li><a href="logout.html">Logout</a></li>
+            <li><a href="{{ url_for('web.base') }}">Transaction</a></li>
+            <li><a href="{{ url_for('web.dashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('web.reports') }}">Reports</a></li>
+            <li><a href="{{ url_for('web.user') }}">User Management</a></li>
+            <li><a href="{{ url_for('web.logout') }}">Logout</a></li>
         </ul>
     </nav>
+    <div>
+        <form action="">
+            <label for="vehicle number">Vehicle Number:</label>
+            <input type="text" name="vehicle number"><br><br>
+            <label for="supplier name">Supplier Name:</label>
+            <input type="text" name="supplier name"><br><br>
+            <label for="material type">Material type:</label>
+            <input type="text" name="material type"><br><br>
+            <label for="transaction type">Transaction type:</label>
+            <input type="text" name="transaction type"><br><br>
+            <label for="empty weight">Empty Weight:</label>
+            <input type="text" name="empty weight"><br><br>
+            <label for="loaded Weight">Loaded Weight:</label>
+            <input type="text" name="loaded Weight"><br><br><br>
+            <input type="submit" value="Capture"><br><br>
+        </form>
+    </div>
 </body>
 </html>

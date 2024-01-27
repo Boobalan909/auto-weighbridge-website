@@ -19,3 +19,19 @@ def login():
 @bp.route('/base')
 def base():
     return render_template('base.html')
+
+@bp.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
+
+@bp.route('/reports')
+def reports():
+    return render_template('reports.html')
+
+@bp.route('/user management')
+def user():
+    return render_template('user.html')
+
+@bp.route('/logout')
+def logout():
+    return render_template('logout.html')
